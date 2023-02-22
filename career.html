@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+       <!-- Libraries Stylesheet -->
+       <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+       <link href="lib/animate/animate.min.css" rel="stylesheet">
+   
+       <!-- Customized Bootstrap Stylesheet -->
+       <link href="css/bootstrap.min.css" rel="stylesheet">
+   
+       <!-- Template Stylesheet -->
+       <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/career.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <title>DTS Contact Us Page</title>
+  </head>
+  <body>
+        <!-- Navbar Start -->
+        <div id="home" class="container-fluid position-relative p-0">
+          <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+              <a class="navbar-brand p-0">
+                  <h1 class="m-0">DTS</h1>
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                  <span class="fa fa-bars"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarCollapse">
+                  <div class="navbar-nav ms-auto py-0">
+                      <a href="index.html" class="nav-item nav-link active">Back to Homepage</a>
+                  </div>
+              </div>
+          </nav>
+      </div>
+
+      <!-- container Start -->
+    <div class="container">
+      <div class="contact_data2">
+        <ul>
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <strong>Location:</strong>
+            <p>Bangalore</p>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <strong>Email:</strong>
+            <p>info@dtsinfotechnologies.com</p>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <strong>Call:</strong>
+            <p>+91-9353472157</p>
+          </li>
+        </ul>
+        <div class="map">
+        </iframe> -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d294.0644063067861!2d77.59212327770227!3d12.904639485313952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1518cf3019cb%3A0xc13a3d099ad2b69b!2sDTS%20Info%20Technologies!5e1!3m2!1sen!2sin!4v1677084051327!5m2!1sen!2sin" width="600" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+        </div>
+      </div>
+      <div class="contact_data">
+        <h2>Contact Us</h2>
+        <form onsubmit="Mail(); reset(); return false;">
+          <label for="">Name</label>
+          <input type="text" placeholder="Enter Your Name" id="Name"/>
+          <label for="">Email</label>
+          <input type="email" placeholder="Enter Your Email" id="Email"/>
+          <label for="">Contact Number</label>
+          <input type="Number" placeholder="Enter Your Contact Number" id="Contact"/>
+          <!-- <label for="">Subject</label>
+          <input type="text" placeholder="Enter Your Subject" id="Subject"/> -->
+          <label for="">Message</label>
+          <textarea name="" placeholder="Enter Your Message" id="message"></textarea>
+          <button type="submit">submit</button>
+        </form>
+      </div>
+    </div>
+    <!-- container end -->
+
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+
+<script>
+  function Mail(){
+
+  let name = document.getElementById("Name").value;
+  let email = document.getElementById("Email").value;
+  let contact = document.getElementById("Contact").value;
+  // let subject = document.getElementById("Subject").value;
+  // let file = document.getElementById("File").value;
+  let message = document.getElementById("message").value;
+  
+
+
+
+  Email.send({
+Host : "smtp.elasticemail.com",
+Username : "info@dtsinfotechnologies.com",
+Password : "5FD6E1902F23D86BCA652846D78FE0597979",
+To : 'info@dtsinfotechnologies.com',
+From : "info@dtsinfotechnologies.com",    //from same as username
+Subject : "Mail from user",
+Body : "Name: " + name + "<br/>User Email: " + email + "<br/> Contact Number: " + contact +  "<br/> User message: " + message 
+}).then(
+message => alert("Form Submitted Successfully Thank You")
+);
+  }
+</script>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
